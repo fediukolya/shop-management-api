@@ -4,8 +4,8 @@ import psycopg
 from dotenv import load_dotenv
 from psycopg.rows import dict_row
 
-
 load_dotenv()
+
 
 def get_connection():
     """Створює підключення до PostgreSQL."""
@@ -19,7 +19,6 @@ def get_connection():
         database_url,
         row_factory=dict_row,
     )
-
 
 
 def init_db():
